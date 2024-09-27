@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check disk space
-        run: df . -h
+        run: df -h
       - name: Checkout
         uses: actions/checkout@v3
       - id: get_step
