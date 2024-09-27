@@ -21,8 +21,10 @@ jobs:
   # Get the current step to only run the main job when the learner is on the same step.
   get_current_step:
     name: Check current step number
-    runs-on: ubuntu-22.04-20240915.1.0
+    runs-on: ubuntu-latest
     steps:
+      - name: Check disk space
+        run: df . -h
       - name: Checkout
         uses: actions/checkout@v3
       - id: get_step
